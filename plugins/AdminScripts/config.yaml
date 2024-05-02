@@ -1,0 +1,16 @@
+id: AdminScripts
+name: <__trans phrase="AdminScripts L10N">
+version: 2.0
+description: <__trans phrase="_PLUGIN_DESCRIPTION">
+author_name: <__trans phrase="_PLUGIN_AUTHOR">
+author_link: https://logical-studio.com/
+l10n_class: AdminScripts::L10N
+
+system_config_template: system.tmpl
+settings:
+    filepath:
+        scope: system
+        default: ""
+
+callbacks:
+    MT::App::CMS::template_source.footer: $AdminScripts::AdminScripts::CMS::template_source_footer
